@@ -1,0 +1,7 @@
+### accuracy.py (answer rows from --from; prompt_0 answer starts at row 55, prompt_1 at 57) ###
+vllm_bf16kv.prompt_0.safetensors: top-1 == next token on rows 55..1022: 0.965   (all rows 0.926)
+vllm_fp8kv.prompt_0.safetensors: top-1 == next token on rows 55..1022: 0.946   (all rows 0.905)
+vllm_bf16kv_fi.prompt_0.safetensors: top-1 == next token on rows 55..1022: 0.969   (all rows 0.928)
+vllm_bf16kv.prompt_1.safetensors: top-1 == next token on rows 57..1022: 0.976   (all rows 0.930)
+vllm_fp8kv.prompt_1.safetensors: top-1 == next token on rows 57..1022: 0.973   (all rows 0.928)
+vllm_bf16kv_fi.prompt_1.safetensors: top-1 == next token on rows 57..1022: 0.981   (all rows 0.934)

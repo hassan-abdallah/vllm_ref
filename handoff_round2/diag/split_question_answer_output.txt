@@ -1,0 +1,28 @@
+
+KERNEL-vs-KERNEL prompt_0 (question = rows 0..54)
+  a=vllm_bf16kv_fi.prompt_0.safetensors
+  b=vllm_bf16kv.prompt_0.safetensors
+  question rows  n=  55  p50=0.0106 p95=0.4505 max=1.099  over0.01= 29 (52.7%)  over0.1= 14 (25.5%)  top1=0.8909
+  answer rows    n= 969  p50=0.0004 p95=0.0582 max=0.405  over0.01=219 (22.6%)  over0.1= 21 (2.2%)  top1=0.9711
+  all rows       n=1024  p50=0.0005 p95=0.0742 max=1.099  over0.01=248 (24.2%)  over0.1= 35 (3.4%)  top1=0.9668
+
+FP8-vs-bf16 KV prompt_0
+  a=vllm_fp8kv.prompt_0.safetensors
+  b=vllm_bf16kv.prompt_0.safetensors
+  question rows  n=  55  p50=0.0212 p95=0.4867 max=0.776  over0.01= 34 (61.8%)  over0.1= 14 (25.5%)  top1=0.8909
+  answer rows    n= 969  p50=0.0008 p95=0.1119 max=0.674  over0.01=277 (28.6%)  over0.1= 57 (5.9%)  top1=0.9525
+  all rows       n=1024  p50=0.0009 p95=0.1218 max=0.776  over0.01=311 (30.4%)  over0.1= 71 (6.9%)  top1=0.9492
+
+KERNEL-vs-KERNEL prompt_1 (question = rows 0..56)
+  a=vllm_bf16kv_fi.prompt_1.safetensors
+  b=vllm_bf16kv.prompt_1.safetensors
+  question rows  n=  57  p50=0.0113 p95=0.5809 max=9.851  over0.01= 30 (52.6%)  over0.1= 16 (28.1%)  top1=0.9474
+  answer rows    n= 967  p50=0.0000 p95=0.0527 max=0.712  over0.01=143 (14.8%)  over0.1= 28 (2.9%)  top1=0.9783
+  all rows       n=1024  p50=0.0000 p95=0.0859 max=9.851  over0.01=173 (16.9%)  over0.1= 44 (4.3%)  top1=0.9766
+
+FP8-vs-bf16 KV prompt_1
+  a=vllm_fp8kv.prompt_1.safetensors
+  b=vllm_bf16kv.prompt_1.safetensors
+  question rows  n=  57  p50=0.0128 p95=0.8293 max=3.148  over0.01= 33 (57.9%)  over0.1= 14 (24.6%)  top1=0.8421
+  answer rows    n= 967  p50=0.0000 p95=0.0958 max=0.901  over0.01=188 (19.4%)  over0.1= 47 (4.9%)  top1=0.9772
+  all rows       n=1024  p50=0.0000 p95=0.1206 max=3.148  over0.01=221 (21.6%)  over0.1= 61 (6.0%)  top1=0.9697

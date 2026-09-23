@@ -1,0 +1,36 @@
+################ KERNEL-vs-KERNEL floor: TRITON_ATTN vs TRITON_FLASH_ATTN, prompt_0 ################
+a = vllm_bf16kv_fi.prompt_0.safetensors  [vllm-0.30.0 RedHatAI/gemma-4-31B-it-FP8-block bf16 kv=auto tp=1 attn=TRITON_ATTN]
+b = vllm_bf16kv.prompt_0.safetensors  [vllm-0.30.0 RedHatAI/gemma-4-31B-it-FP8-block bf16 kv=auto tp=1]
+positions 1024, k 32, rebase top
+KL(b||a): mean 0.0158 p50 0.0005 p95 0.0742 max 1.099 at 7
+positions over 0.01: 248   over 0.1: 35
+top-1 agreement 990/1024   top-5 (>=4 of 5 shared) 998/1024   mean top-32 overlap 0.923   positions with < half shared 1
+|log-prob gap| on shared tokens (relative to each row's top-1): mean 0.392 nats, p90 0.608
+
+################ KERNEL-vs-KERNEL floor: TRITON_ATTN vs TRITON_FLASH_ATTN, prompt_1 ################
+a = vllm_bf16kv_fi.prompt_1.safetensors  [vllm-0.30.0 RedHatAI/gemma-4-31B-it-FP8-block bf16 kv=auto tp=1 attn=TRITON_ATTN]
+b = vllm_bf16kv.prompt_1.safetensors  [vllm-0.30.0 RedHatAI/gemma-4-31B-it-FP8-block bf16 kv=auto tp=1]
+positions 1024, k 32, rebase top
+KL(b||a): mean 0.0266 p50 0.0000 p95 0.0859 max 9.851 at 45
+positions over 0.01: 173   over 0.1: 44
+top-1 agreement 1000/1024   top-5 (>=4 of 5 shared) 994/1024   mean top-32 overlap 0.909   positions with < half shared 2
+|log-prob gap| on shared tokens (relative to each row's top-1): mean 0.424 nats, p90 0.658
+
+################ FP8 KV vs bf16 KV, prompt_0 ################
+a = vllm_fp8kv.prompt_0.safetensors  [vllm-0.30.0 RedHatAI/gemma-4-31B-it-FP8-block bf16 kv=fp8_e4m3 tp=1]
+b = vllm_bf16kv.prompt_0.safetensors  [vllm-0.30.0 RedHatAI/gemma-4-31B-it-FP8-block bf16 kv=auto tp=1]
+positions 1024, k 32, rebase top
+KL(b||a): mean 0.0254 p50 0.0009 p95 0.1218 max 0.776 at 37
+positions over 0.01: 311   over 0.1: 71
+top-1 agreement 972/1024   top-5 (>=4 of 5 shared) 992/1024   mean top-32 overlap 0.903   positions with < half shared 2
+|log-prob gap| on shared tokens (relative to each row's top-1): mean 0.503 nats, p90 0.803
+
+################ FP8 KV vs bf16 KV, prompt_1 ################
+a = vllm_fp8kv.prompt_1.safetensors  [vllm-0.30.0 RedHatAI/gemma-4-31B-it-FP8-block bf16 kv=fp8_e4m3 tp=1]
+b = vllm_bf16kv.prompt_1.safetensors  [vllm-0.30.0 RedHatAI/gemma-4-31B-it-FP8-block bf16 kv=auto tp=1]
+positions 1024, k 32, rebase top
+KL(b||a): mean 0.0269 p50 0.0000 p95 0.1206 max 3.148 at 7
+positions over 0.01: 221   over 0.1: 61
+top-1 agreement 993/1024   top-5 (>=4 of 5 shared) 985/1024   mean top-32 overlap 0.891   positions with < half shared 4
+|log-prob gap| on shared tokens (relative to each row's top-1): mean 0.505 nats, p90 0.773
+
