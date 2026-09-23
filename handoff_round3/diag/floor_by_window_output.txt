@@ -1,0 +1,12 @@
+################ KERNEL-vs-KERNEL, prompt rows 0:1024 (sliding window = 1024) ################
+KL(b||a): mean 0.2901 p50 0.0710 p95 1.1400 max 9.322 at 494
+positions over 0.01: 773   over 0.1: 447
+top-1 agreement 853/1024   top-5 (>=4 of 5 shared) 767/1024   mean top-32 overlap 0.789   positions with < half shared 30
+|log-prob gap| on shared tokens (relative to each row's top-1): mean 1.037 nats, p90 1.780
+
+################ KERNEL-vs-KERNEL, prompt rows 1024:2048 (sliding window = 1024) ################
+KL(b||a): mean 0.1124 p50 0.0287 p95 0.3658 max 7.113 at 2007
+positions over 0.01: 689   over 0.1: 237
+top-1 agreement 892/1024   top-5 (>=4 of 5 shared) 921/1024   mean top-32 overlap 0.863   positions with < half shared 9
+|log-prob gap| on shared tokens (relative to each row's top-1): mean 0.635 nats, p90 1.013
+

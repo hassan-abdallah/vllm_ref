@@ -1,0 +1,8 @@
+row 2141: context tail = ' contention in such narrow space as is permitted to me, I propose here to show'
+actual next token (id 107) = '\n'
+
+  bf16kv (TRITON_FLASH_ATTN)   top-4: '\n'=0.725  ' cause'=0.267  ' la'=0.006  ' a'=0.001
+  bf16kv_fi (TRITON_ATTN)      top-4: ' cause'=0.925  '\n'=0.067  ' la'=0.004  ' l'=0.001
+  fp8kv                        top-4: '\n'=0.497  ' cause'=0.497  ' la'=0.003  ' l'=0.001
+
+continuation rows where top-1 prob < 0.6 in bf16kv (near-ties):

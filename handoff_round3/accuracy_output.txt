@@ -1,0 +1,4 @@
+### accuracy.py --from 2048 (continuation rows) ###
+vllm_bf16kv.prompt_0.safetensors: top-1 == next token on rows 2048..2174: 1.000   (all rows 0.355)
+vllm_fp8kv.prompt_0.safetensors: top-1 == next token on rows 2048..2174: 1.000   (all rows 0.356)
+vllm_bf16kv_fi.prompt_0.safetensors: top-1 == next token on rows 2048..2174: 0.992   (all rows 0.347)
