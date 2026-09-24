@@ -1,0 +1,7 @@
+vLLM first 8 : [529, 506, 236743, 236832, 236800, 236771, 236751, 236761] ' of the 730s.'
+theirs first7: [529, 506, 236743, 236770, 236800, 236771, 715] ' of the 130//'
+first divergence at generated index 3: vLLM 236832 '7' vs theirs 236770 '1'
+most common ids: [(529, 19, ' of'), (506, 19, ' the'), (1913, 18, ' during'), (28797, 18, ' reign'), (130085, 17, ' Empress')]
+id 759 (' la') count: 0
+phrase loop: period 6 tokens = ' Empress Wu during the reign of'
+loop begins at generated index ~26; coherent prefix: ' of the 730s. His paternal grandfather was Du Shenyan , a l noted politician and politician during the reign of'
