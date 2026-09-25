@@ -43,6 +43,10 @@ def main() -> None:
         gpu_memory_utilization=args.gpu_memory_utilization,
         tensor_parallel_size=args.tensor_parallel_size,
         enable_prefix_caching=False,
+        # Only change from the handoff copy: FlashInfer's startup autotune crashes with a CUDA
+        # illegal memory access on this build (vllm 0.30.0 / CUDA 13, Gemma-4). Same override
+        # used in rounds 1-4. Affects kernel selection only, not the math.
+        kernel_config={"enable_flashinfer_autotune": False},
     )
     params = SamplingParams(temperature=0.0, max_tokens=args.max_new, stop_token_ids=[args.stop_id], skip_special_tokens=False)
     outputs = llm.generate([{"prompt_token_ids": p["token_ids"]} for p in prompts], params)

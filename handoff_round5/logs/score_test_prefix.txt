@@ -1,0 +1,15 @@
+== vllm: 8454/12032 = 70.26 %  unparsable 3  cap hits 1848  mean generated 2.2
+   biology              634/717    88.42 %
+   business             512/789    64.89 %
+   chemistry            647/1132   57.16 %
+   computer science     314/410    76.59 %
+   economics            706/844    83.65 %
+   engineering          584/969    60.27 %
+   health               632/818    77.26 %
+   history              284/381    74.54 %
+   law                  732/1101   66.49 %
+   math                 914/1351   67.65 %
+   other                653/924    70.67 %
+   philosophy           374/499    74.95 %
+   physics              798/1299   61.43 %
+   psychology           670/798    83.96 %

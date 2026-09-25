@@ -1,0 +1,20 @@
+== vllm: 52/70 = 74.29 %  unparsable 0  cap hits 8  mean generated 2.1
+   biology                4/5      80.00 %
+   business               4/5      80.00 %
+   chemistry              3/5      60.00 %
+   computer science       4/5      80.00 %
+   economics              5/5     100.00 %
+   engineering            2/5      40.00 %
+   health                 4/5      80.00 %
+   history                3/5      60.00 %
+   law                    4/5      80.00 %
+   math                   3/5      60.00 %
+   other                  4/5      80.00 %
+   philosophy             4/5      80.00 %
+   physics                4/5      80.00 %
+   psychology             4/5      80.00 %
+   q0 gold A pred A [stop] 'A)'
+   q1 gold H pred H [stop] 'H)'
+   q2 gold E pred H [stop] 'H)'
+   q3 gold I pred H [stop] 'H)'
+   q4 gold B pred B [stop] 'B)'

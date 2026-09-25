@@ -1,0 +1,15 @@
+== vllm: 988/1400 = 70.57 %  unparsable 1  cap hits 206  mean generated 2.1
+   biology               71/83     85.54 %
+   business              66/91     72.53 %
+   chemistry             81/131    61.83 %
+   computer science      38/47     80.85 %
+   economics             76/99     76.77 %
+   engineering           61/112    54.46 %
+   health                73/95     76.84 %
+   history               39/44     88.64 %
+   law                   86/129    66.67 %
+   math                 107/158    67.72 %
+   other                 67/108    62.04 %
+   philosophy            42/58     72.41 %
+   physics               99/151    65.56 %
+   psychology            82/94     87.23 %

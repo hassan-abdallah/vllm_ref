@@ -1,0 +1,6 @@
+vllm_test_cot_1400.jsonl: n=1400 generated p50=451 p90=819 max=1023  finished_by={'stop': 1323, 'cap': 77}  unparsable=67 (of which cap=67, stop=0)
+vllm_test_cot_1400_fp8kv.jsonl: n=1400 generated p50=456 p90=852 max=1023  finished_by={'stop': 1326, 'cap': 74}  unparsable=70 (of which cap=70, stop=0)
+vllm_val_cot.jsonl: n=70 generated p50=396 p90=633 max=1023  finished_by={'stop': 69, 'cap': 1}  unparsable=1 (of which cap=1, stop=0)
+
+vllm_test_prefix_1400.jsonl: cap hits 206/1400; sample decoded: ['J)\n\n**', 'A)\n\n**', 'A)\n\n**', 'I)\n\n**', 'I)\n\n**', 'A)\n\n**']
+   first generated token distribution: [('B', 171), ('D', 167), ('F', 155), ('C', 149), ('A', 143), ('H', 134), ('G', 133), ('I', 127), ('E', 111), ('J', 110)]

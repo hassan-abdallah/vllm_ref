@@ -1,0 +1,46 @@
+== bf16kv: 1142/1400 = 81.57 %  unparsable 67  cap hits 77  mean generated 512.4
+   biology               74/83     89.16 %
+   business              81/91     89.01 %
+   chemistry            111/131    84.73 %
+   computer science      42/47     89.36 %
+   economics             86/99     86.87 %
+   engineering           67/112    59.82 %
+   health                79/95     83.16 %
+   history               41/44     93.18 %
+   law                   92/129    71.32 %
+   math                 140/158    88.61 %
+   other                 75/108    69.44 %
+   philosophy            44/58     75.86 %
+   physics              128/151    84.77 %
+   psychology            82/94     87.23 %
+== fp8kv: 1132/1400 = 80.86 %  unparsable 70  cap hits 74  mean generated 518.6
+   biology               75/83     90.36 %
+   business              81/91     89.01 %
+   chemistry            111/131    84.73 %
+   computer science      41/47     87.23 %
+   economics             83/99     83.84 %
+   engineering           56/112    50.00 %
+   health                76/95     80.00 %
+   history               40/44     90.91 %
+   law                   90/129    69.77 %
+   math                 142/158    89.87 %
+   other                 76/108    70.37 %
+   philosophy            47/58     81.03 %
+   physics              132/151    87.42 %
+   psychology            82/94     87.23 %
+== paired bf16kv vs fp8kv on 1400 questions: same letter 1320 (94.3 %)
+   both right 1109  bf16kv only 33  fp8kv only 23  both wrong 235  (McNemar discordant 56)
+   biology            both   74  bf16kv-only   0  fp8kv-only   1  neither    8
+   business           both   80  bf16kv-only   1  fp8kv-only   1  neither    9
+   chemistry          both  108  bf16kv-only   3  fp8kv-only   3  neither   17
+   computer science   both   41  bf16kv-only   1  fp8kv-only   0  neither    5
+   economics          both   83  bf16kv-only   3  fp8kv-only   0  neither   13
+   engineering        both   53  bf16kv-only  14  fp8kv-only   3  neither   42
+   health             both   74  bf16kv-only   5  fp8kv-only   2  neither   14
+   history            both   40  bf16kv-only   1  fp8kv-only   0  neither    3
+   law                both   90  bf16kv-only   2  fp8kv-only   0  neither   37
+   math               both  140  bf16kv-only   0  fp8kv-only   2  neither   16
+   other              both   74  bf16kv-only   1  fp8kv-only   2  neither   31
+   philosophy         both   44  bf16kv-only   0  fp8kv-only   3  neither   11
+   physics            both  127  bf16kv-only   1  fp8kv-only   5  neither   18
+   psychology         both   81  bf16kv-only   1  fp8kv-only   1  neither   11
